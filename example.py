@@ -10,8 +10,10 @@ def Signer(TT_URL,UserAgent): # a Signer Function
     REQ_data = {
         'url': TT_URL, #TIKTOK URL
         'userAgent': UserAgent, #YOU Can chanage userAgent
+        'data': '',
         'Token': 'main-HH7H@X-Bogus', #API_TOKEN
-        'method': 'GET' #TIKTOK INFO use GET method
+        'method': 'GET', #TIKTOK INFO use GET method
+        'version': '2'
     }
     response = requests.post(url='https://x-bogus.onrender.com/api/x-bogus/',data=REQ_data).json()
     return response['new_url']
